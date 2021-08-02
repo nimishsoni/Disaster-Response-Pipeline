@@ -32,6 +32,7 @@ def clean_data(messages_categories):
         # convert column from string to numeric
         categories[column] = categories[column].astype(int)
 
+    categories.replace(2, 1, inplace=True)
     messages_categories.drop('categories', axis=1, inplace=True)
     messages_categories = pd.concat([messages_categories, categories], axis=1)
     messages_categories.drop_duplicates(inplace=True)
