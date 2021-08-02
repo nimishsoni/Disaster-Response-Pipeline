@@ -5,7 +5,7 @@ Analyze disaster data to build a model for an API that classifies disaster messa
 Install Python Packages: Pandas, Numpy,re, sys, json, sqlite3, sklearn, nltk, sqlalchemy, pickle, Flask, plotly
 
 ## Project Motivation
-This work is part of Udacity Data Science Nanodegree project requirement. The task here is to analyze disaster data to build a model for an API that classifies disaster messages. This categorization aids different departments to take necessary action in time. A web app is created where user can enter a text message which is categorized by the classifier model model 
+This work is part of Udacity Data Science Nanodegree project requirement. The task here is to analyze disaster data to build a model for an API that classifies disaster related text messages. This categorization aids different departments to take necessary action in the event of a disaster, where people post text messages through social media or news. Thus people can be reached and provided necessary aid as quickly as possible. A web app is created where user can enter a text message which is categorized by the classifier model. 
 
 ## Project Details
 ### ETL Pipeline: 
@@ -46,7 +46,7 @@ Folders
     - To run ETL pipeline that cleans data and stores in database
         `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
     - To run ML pipeline that trains classifier and saves
-        `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
+        `python models/train_classifier.py data/DisasterResponse.db models/DisasterResponse_classifier.pkl`
 
 2. Run the following command in the app's directory to run your web app.
     `python run.py`
