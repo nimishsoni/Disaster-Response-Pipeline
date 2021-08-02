@@ -67,7 +67,7 @@ def evaluate_model(model, x_test, y_test, category_names):
     y_pred = model.predict(x_test)
     for i in range(36):
         print(y_test.columns[i], ':')
-        print(classification_report(y_test.iloc[:, i], y_pred[:, i], target_names=category_names))
+        print(classification_report(y_test.iloc[:, i], y_pred[:, i]))
 
 
 def save_model(model, model_filepath):
@@ -91,7 +91,7 @@ def main():
         
         print('Training model...')
         model.fit(x_train, y_train)
-        model = model.best_params_
+        #model = model.best_params_
         print('Evaluating model...')
         evaluate_model(model, x_test, y_test, category_names)
 
